@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "705b3b2c-6e67-4092-92f9-1d7d30d7e46e",
+		"name": "Brainny",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23052874"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "AUTH",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"teste2@teste\",\r\n    \"password\": \"456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST CLOCKIN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": " eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0ZTJAdGVzdGUiLCJpc0FkbWluIjoxLCJpYXQiOjE2Njk4NjAxNzMsImV4cCI6MTY2OTg2MTE3M30.YhVKBiGFsoHMQkhn30-p9sntvgYGdwYOMQnDODzMZu4",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/clockin/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"clockin",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET CLOCKIN",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0ZTJAdGVzdGUiLCJpc0FkbWluIjoxLCJpYXQiOjE2Njk4NjA3ODAsImV4cCI6MTY2OTg2MTc4MH0.iZMzQWELSjwP-73hEm2qlc3v5xo3g9qDrzFOM0XMEdc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"29/11/2022 18:56\",\r\n    \"userId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/clockin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"clockin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET USERS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0ZTJAdGVzdGUiLCJpc0FkbWluIjoxLCJpYXQiOjE2Njk4NjA3ODAsImV4cCI6MTY2OTg2MTc4MH0.iZMzQWELSjwP-73hEm2qlc3v5xo3g9qDrzFOM0XMEdc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
